@@ -134,37 +134,9 @@
 				owner: 'songcubi',
 				admin: ['songcubi'],
 				labels: ['Gitalk'],
-				id: md5("blog" + title),
 				perPage: 50
 			})
 		</script>
-		<!-- <script>
-		        window.$docsify.plugins = [].concat(function(hook, vm) {
-		            const dom = Docsify.dom;
-		            hook.mounted(function() {
-		                const div = dom.create("div");
-		                div.id = "gitalk-container";
-		                const main = dom.getNode("#main");
-		                div.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;padding-bottom: 50px;";
-		                dom.appendTo(dom.find(".content"), div);
-		            });
-		            hook.doneEach(function() {
-		                
-		                for(let n = document.getElementById("gitalk-container"); n.hasChildNodes();) n.removeChild(n.firstChild);
-		                new Gitalk({
-		                    clientID: "530bac71b78c99f3ca8a",
-		                    clientSecret: "57cce06d163ca2447b0238d9828267ed1b953043",
-		                    repo: "RoadOfLearning",
-		                    owner: "songcubi",
-		                    title: title,
-		                    body: `[${title}](${location.href})`,
-		                    admin: ["songcubi"],
-		                    id: md5("blog" + title),
-		                    distractionFreeMode: false
-		                }).render("gitalk-container");
-		            });
-		        }, $docsify.plugins);
-		    </script> -->
 
 
 	</body>
