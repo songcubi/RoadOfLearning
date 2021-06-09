@@ -31,7 +31,7 @@
 
 				name: 'songcubi',
 				repo: 'https://github.com/songcubi',
-				basePath:"https://cdn.jsdelivr.net/gh/songcubi/RoadOfLearning@gh-pages/",
+				basePath: "https://cdn.jsdelivr.net/gh/songcubi/RoadOfLearning@gh-pages/",
 				loadSidebar: true,
 				auto2top: true,
 				// subMaxLevel: 2,
@@ -78,13 +78,13 @@
 					paths: 'auto',
 					placeholder: 'search🔎',
 				},
-				
+
 				pagination: {
-				    previousText: '上一章',
-				    nextText: '下一章',
-				    crossChapter: true,
-				    crossChapterText: true,
-				  },
+					previousText: '上一章',
+					nextText: '下一章',
+					crossChapter: true,
+					crossChapterText: true,
+				},
 
 			}
 		</script>
@@ -97,7 +97,7 @@
 
 		<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 
-		
+
 
 
 		<!-- docsify-tabs (latest v1.x.x) -->
@@ -115,27 +115,32 @@
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/docsify-count/dist/countable.js"></script>
-		
-		
+
+
 		<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-		
+
 		<script src="https://cdn.jsdelivr.net/npm/docsify-catalog/dist/catalog.js"></script>
-		
-		
-		<!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script> -->
+
+
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 		<script>
-			
 			const gitalk = new Gitalk({
-				id: decodeURI("{{ page.url }}"),
+				id: location.pathname,
 				clientID: '530bac71b78c99f3ca8a',
 				clientSecret: '57cce06d163ca2447b0238d9828267ed1b953043',
 				repo: 'RoadOfLearning',
 				owner: 'songcubi',
 				admin: ['songcubi'],
-				labels: ['Gitalk'],
-				perPage: 50
+				title: location.hash.match(/#(.*?)([?]|$)/)[1],
+				id: location.hash.match(/#(.*?)([?]|$)/)[1]
 			})
+			// 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+			window.onhashchange = function(event){
+			      if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
+			        location.reload()
+			      }
+			    }
 		</script>
 
 
