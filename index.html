@@ -17,10 +17,21 @@
         gtag("js", new Date());
         gtag("config", "G-57PHBXT1C5");
     </script>
+	
+	
+	<!-- 这个插件用来在 Markdown 中显示选项卡。 -->
+	<style>
+		:root {
+			--docsifytabs-border-color: #ededed;
+			--docsifytabs-tab-highlight-color: purple;
+		}
+	</style>
 </head>
 
 <body>
-    <div id="app">Please wait...</div>
+    <div id="app">
+    	喝茶🍵中，请稍后！
+    </div>
     <script>
         window.$docsify = {
             name: "songcubi",
@@ -45,7 +56,14 @@
             },
             count: {
                 position: "bottom",
-            }
+            },
+			tabs: {
+				persist: true, // default
+				sync: true, // default
+				theme: 'classic', // default
+				tabComments: true, // default
+				tabHeadings: true // default
+			},
         }
     </script>
     <script src="https://cdn.jsdelivr.net/gh/WindrunnerMax/EveryDay@095d135/static/docsify.min.js"></script>
@@ -56,6 +74,11 @@
     <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-count/dist/countable.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+	<!-- docsify-tabs (latest v1.x.x) -->
+	<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+	<!-- 代码高亮 -->
+	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/blueimp-md5"></script>
     <script>
         window.$docsify.plugins = [].concat(function(hook, vm) {
