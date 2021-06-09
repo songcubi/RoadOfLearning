@@ -3,7 +3,7 @@
 	* [SpringMVC](java/SpringMVC.md)
 
 * Browser
-	* [深入了解浏览器](browser/深入了解浏览器.md) 
+	* [浏览器](browser/深入了解浏览器.md) 
 	
 * CSS
 
