@@ -10,17 +10,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WindrunnerMax/EveryDay@095d135/static/vue.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 		<meta name="referrer" content="no-referrer">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="//www.googletagmanager.com/gtag/js?id=G-57PHBXT1C5"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-			gtag("config", "G-57PHBXT1C5");
-		</script>
+		
 
 
 		<!-- 这个插件用来在 Markdown 中显示选项卡。 -->
@@ -43,7 +33,7 @@
 				coverpage: true,
 				loadSidebar: true,
 				auto2top: true,
-				themeColor: "#39ff25",
+				themeColor: "#f54d2d",
 				subMaxLevel: 2,
 				search: {
 					depth: 1,
@@ -55,9 +45,6 @@
 					"/.*/_sidebar.md": "/_sidebar.md"
 				},
 				plugins: [],
-				requestHeaders: {
-					// "cache-control": "no-cache",
-				},
 				count: {
 					position: "bottom",
 				},
@@ -71,19 +58,24 @@
 			}
 		</script>
 		<script src="https://cdn.jsdelivr.net/gh/WindrunnerMax/EveryDay@095d135/static/docsify.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/docsify-catalog/dist/catalog.js"></script>
+		
+		
 		<script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-fold/dist/sidebar.js"></script>
+		
 		<script src="https://cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+		
 		<script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+		
 		<script src="https://cdn.jsdelivr.net/npm/docsify-count/dist/countable.js"></script>
+		
 		<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 		<!-- docsify-tabs (latest v1.x.x) -->
 		<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-		<!-- 代码高亮 -->
-		<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-		<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/blueimp-md5"></script>
+		
+		<!-- 全文搜索 - Search -->
+		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+		
+		
 		<script>
 			window.$docsify.plugins = [].concat(function(hook, vm) {
 				const dom = Docsify.dom;
@@ -109,7 +101,6 @@
 						labels: ['Gitalk'],
 						body: `[${title}](${location.href})`,
 						admin: ["songcubi"],
-						id: md5("blog" + title),
 						distractionFreeMode: false
 					}).render("gitalk-container");
 				});
