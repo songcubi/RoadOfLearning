@@ -64,8 +64,8 @@
 						});
 					}
 				],
-				
-				
+
+
 				search: {
 					maxAge: 86400000, // 过期时间，单位毫秒，默认一天
 					noData: 'No Results!',
@@ -87,13 +87,15 @@
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 		<script>
-		  const gitalk = new Gitalk({
-		    clientID: '530bac71b78c99f3ca8a',
-		    clientSecret: '57cce06d163ca2447b0238d9828267ed1b953043',
-		    repo: 'RoadOfLearning.github.io',
-		    owner: 'songcubi'
-			
-		  })
+			const gitalk = new Gitalk({
+				clientID: '530bac71b78c99f3ca8a',
+				clientSecret: '57cce06d163ca2447b0238d9828267ed1b953043',
+				repo: 'RoadOfLearning',
+				owner: 'songcubi',
+				admin: ['songcubi'],
+				labels: ['Gitalk'],
+				perPage: 50
+			})
 		</script>
 
 
