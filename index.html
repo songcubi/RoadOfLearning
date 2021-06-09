@@ -123,12 +123,7 @@
 		
 		
 		<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-		<!-- <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script> -->
-		<script src="https://cdn.jsdelivr.net/npm/blueimp-md5"></script>
 		<script>
-			let title = decodeURIComponent(vm.route.path.split("/").slice(-1).pop());
-			if(!title) title = window.$docsify.name;
-			document.title = title;
 			
 			const gitalk = new Gitalk({
 				clientID: '530bac71b78c99f3ca8a',
@@ -136,9 +131,7 @@
 				repo: 'RoadOfLearning',
 				owner: 'songcubi',
 				admin: ['songcubi'],
-				title: title,
 				labels: ['Gitalk'],
-				id: md5("blog" + title),
 				perPage: 50
 			})
 		</script>
