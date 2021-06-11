@@ -8,9 +8,11 @@
 * Browser
 	* [浏览器](browser/深入了解浏览器.md) 
 
+* me
+	* [每日规划](me/doWhat.md) 
+
 * CSS
 
 * Html
 
 * JavaScript
-
