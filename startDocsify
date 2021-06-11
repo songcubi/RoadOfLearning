@@ -1,0 +1,13 @@
+#!/usr/bin/env bash 
+
+# dirname $0，取得当前执行的脚本文件的父目录
+basepath=$(cd `dirname $0`; pwd)
+
+#进入到所在的目录
+cd ${basepath}
+
+# 打印当前路径
+echo "当前文件夹路径: $basepath"
+
+# 运行文档网站
+docsify serve

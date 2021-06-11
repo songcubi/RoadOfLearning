@@ -11,4 +11,4 @@
 [![star](https://img.shields.io/badge/StartTime-2021.6.8-red.svg "Author")](https://github.com/songcubi)
 
 [GitHub🚁](https://github.com/docsifyjs/docsify/)
-[Get Started🚀](#docsify)
+[Get Started🚀](#格式提示)
