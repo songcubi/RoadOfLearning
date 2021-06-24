@@ -1,5 +1,20 @@
 # 格式提示
 
+## 字体
+
+1. font 标签
+
+```html
+<font color='red'>红色</font>
+```
+
+2.span 标签
+
+```html
+<span style='color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;'>文字</span>
+```
+
+
 
 ## 代码高亮
 
